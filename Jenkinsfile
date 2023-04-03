@@ -17,7 +17,7 @@ pipeline {
 
         stage("Deploy"){
             steps{
-                deploy adapters: [tomcat9(credentialsId: 'Tomcat-login', path: '', url: 'http://localhost:8090/')], contextPath: 'khanhtm', onFailure: false, war: '**/*.war'
+                deploy adapters: [tomcat9(credentialsId: 'Tomcat-loggin', path: '', url: 'http://localhost:8090')], contextPath: 'khanhtm', war: '**/*.war'
             }
         }
     }
